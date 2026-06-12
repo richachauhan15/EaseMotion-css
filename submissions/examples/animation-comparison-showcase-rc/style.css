@@ -1,0 +1,68 @@
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f8;
+    margin:0;
+    padding:2rem;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+}
+
+.intro{
+    text-align:center;
+    margin-bottom:2rem;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    padding:1.5rem;
+    text-align:center;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+    cursor:pointer;
+}
+
+.fade:hover{
+    opacity:.6;
+    transition:.4s;
+}
+
+.slide:hover{
+    transform:translateX(15px);
+    transition:.4s;
+}
+
+.bounce:hover{
+    animation:bounce .7s;
+}
+
+.zoom:hover{
+    transform:scale(1.08);
+    transition:.4s;
+}
+
+.rotate:hover{
+    transform:rotate(8deg);
+    transition:.4s;
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+}
