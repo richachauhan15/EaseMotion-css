@@ -1,14 +1,15 @@
 # Animated Habit Tracker Dashboard
 
-A modern dashboard for tracking daily habits, streaks, and progress with engaging animations.
+A modern dashboard for tracking habits, streaks, goals, and daily productivity progress.
 
 ## Features
 
-- Habit tracking cards
-- Daily streak counters
+- Habit statistics cards
+- Daily completion tracker
 - Weekly progress overview
-- Completion indicators
-- Activity timeline
+- Streak monitoring
+- Goal completion tracking
+- Activity feed
 - Responsive layout
 - Smooth animations
 
