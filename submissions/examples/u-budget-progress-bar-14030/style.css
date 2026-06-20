@@ -1,0 +1,77 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f4f6f9;
+}
+
+.budget-card{
+    width:380px;
+    padding:25px;
+    background:#fff;
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+h2{
+    margin-bottom:18px;
+    color:#333;
+}
+
+.budget-info{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:12px;
+    color:#555;
+    font-size:14px;
+}
+
+.progress-container{
+    width:100%;
+    height:18px;
+    background:#e4e7eb;
+    border-radius:30px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    height:100%;
+    width:0;
+    border-radius:30px;
+    background:linear-gradient(
+        90deg,
+        #22c55e 0%,
+        #eab308 70%,
+        #ef4444 100%
+    );
+    animation:budgetFill 2s ease forwards;
+}
+
+.status{
+    text-align:center;
+    margin-top:14px;
+    font-weight:600;
+    color:#444;
+}
+
+@keyframes budgetFill{
+    from{
+        width:0;
+    }
+    to{
+        width:75%;
+    }
+}
+
+.budget-card:hover .progress-fill{
+    filter:brightness(1.1);
+    transition:0.3s;
+}

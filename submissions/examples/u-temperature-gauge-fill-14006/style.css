@@ -1,0 +1,78 @@
+:root{
+    --ease-temp-value: 75%;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#eef5ff,#d8ecff);
+}
+
+.weather-widget{
+    text-align:center;
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+h2{
+    margin-bottom:20px;
+    color:#333;
+}
+
+.thermometer{
+    width:70px;
+    height:260px;
+    margin:auto;
+    border:6px solid #d6d6d6;
+    border-radius:40px;
+    overflow:hidden;
+    position:relative;
+    background:#f3f4f6;
+}
+
+.temperature-fill{
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:0;
+    background:linear-gradient(
+        to top,
+        #2563eb,
+        #60a5fa,
+        #facc15,
+        #f97316,
+        #dc2626
+    );
+    animation:fillTemp 2.5s ease forwards;
+}
+
+.temperature-value{
+    margin-top:20px;
+    font-size:24px;
+    font-weight:700;
+}
+
+@keyframes fillTemp{
+    from{
+        height:0;
+    }
+    to{
+        height:var(--ease-temp-value);
+    }
+}
+
+.weather-widget:hover .temperature-fill{
+    filter:brightness(1.1);
+}
