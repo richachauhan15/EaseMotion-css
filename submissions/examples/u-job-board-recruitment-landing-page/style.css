@@ -1,0 +1,160 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f8fafc;
+color:#1e293b;
+line-height:1.6;
+}
+
+section{
+padding:80px 8%;
+}
+
+.hero{
+min-height:100vh;
+background:linear-gradient(135deg,#2563eb,#1e40af);
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
+}
+
+.hero h1{
+font-size:3rem;
+margin-bottom:25px;
+}
+
+.search-box{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+justify-content:center;
+margin-bottom:25px;
+}
+
+.search-box input{
+padding:14px;
+width:250px;
+border:none;
+border-radius:8px;
+outline:none;
+}
+
+.search-box button{
+padding:14px 24px;
+border:none;
+border-radius:8px;
+background:#f59e0b;
+color:white;
+cursor:pointer;
+font-weight:bold;
+}
+
+.cta-btn,
+.cta a{
+display:inline-block;
+padding:14px 28px;
+background:#f59e0b;
+color:white;
+text-decoration:none;
+border-radius:30px;
+transition:.3s;
+}
+
+.cta-btn:hover,
+.cta a:hover{
+transform:translateY(-4px);
+}
+
+.job-grid,
+.category-grid,
+.logo-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.job-card,
+.category-grid div,
+.logo-grid div,
+.testimonial{
+background:white;
+padding:25px;
+border-radius:16px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+transition:.3s;
+text-align:center;
+}
+
+.job-card:hover,
+.category-grid div:hover,
+.logo-grid div:hover{
+transform:translateY(-8px);
+}
+
+.featured-jobs h2,
+.categories h2,
+.employers h2,
+.success-stories h2,
+.hiring-companies h2,
+.cta h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+.employers{
+background:#eff6ff;
+text-align:center;
+}
+
+.success-stories{
+background:#f8fafc;
+}
+
+.testimonial{
+max-width:700px;
+margin:30px auto 0;
+font-style:italic;
+}
+
+.hiring-companies{
+background:#ffffff;
+}
+
+.cta{
+background:#1e293b;
+color:white;
+text-align:center;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2rem;
+}
+
+.search-box{
+flex-direction:column;
+align-items:center;
+}
+
+.search-box input{
+width:100%;
+max-width:320px;
+}
+
+.search-box button{
+width:100%;
+max-width:320px;
+}
+
+}
