@@ -1,0 +1,346 @@
+:root {
+    --ease-duration: 0.45s;
+    --ease-easing: cubic-bezier(.22,1,.36,1);
+
+    --ease-scale: .92;
+    --ease-depth: -20px;
+
+    --bg: #eef3ff;
+    --surface: #ffffff;
+
+    --primary: #4f46e5;
+    --secondary: #06b6d4;
+
+    --text: #1e293b;
+    --muted: #64748b;
+
+    --radius: 22px;
+    --shadow:
+        0 20px 40px rgba(15,23,42,.15);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:
+        Inter,
+        Segoe UI,
+        sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #eef2ff,
+        #f8fbff
+    );
+
+    color:var(--text);
+
+    min-height:100vh;
+
+}
+
+.page{
+
+    width:min(1200px,92%);
+    margin:auto;
+
+    padding:70px 0;
+
+}
+
+.hero{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.hero h1{
+
+    font-size:3rem;
+
+    margin-bottom:15px;
+
+}
+
+.hero p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:var(--muted);
+
+    line-height:1.7;
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(280px,1fr)
+        );
+
+    gap:40px;
+
+}
+
+.perspective{
+
+    perspective:900px;
+
+}
+
+.card{
+
+    background:var(--surface);
+
+    border-radius:var(--radius);
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transform-style:preserve-3d;
+
+    transition:
+        transform var(--ease-duration) var(--ease-easing),
+        box-shadow var(--ease-duration) var(--ease-easing),
+        filter var(--ease-duration) var(--ease-easing);
+
+    cursor:pointer;
+
+}
+
+.card:hover{
+
+    transform:
+        scale(var(--ease-scale))
+        translateZ(var(--ease-depth));
+
+    filter:brightness(.98);
+
+    box-shadow:
+        0 12px 25px rgba(15,23,42,.18);
+
+}
+
+.card:active{
+
+    transform:
+        scale(.90)
+        translateZ(calc(var(--ease-depth) * 1.3));
+
+}
+
+.icon{
+
+    width:80px;
+
+    height:80px;
+
+    margin:auto;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:50%;
+
+    font-size:2rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    color:#fff;
+
+    margin-bottom:25px;
+
+}
+
+.card h2{
+
+    margin-bottom:14px;
+
+    font-size:1.5rem;
+
+}
+
+.card p{
+
+    color:var(--muted);
+
+    line-height:1.7;
+
+}
+
+.accent .icon{
+
+    background:
+        linear-gradient(
+            135deg,
+            #ec4899,
+            #f97316
+        );
+
+}
+
+@media (max-width:768px){
+
+.hero h1{
+
+    font-size:2.3rem;
+
+}
+
+.card{
+
+    padding:30px;
+
+}
+
+}
+
+@media (prefers-reduced-motion:reduce){
+
+*{
+
+    animation:none!important;
+
+    transition:none!important;
+
+}
+
+.card:hover{
+
+    transform:none;
+
+}
+
+}
+
+/* ==========================================================
+   EaseMotion CSS
+   Animation: ease-hover-perspective-shrink
+   ========================================================== */
+
+:root {
+    --ease-perspective: 900px;
+    --ease-scale: 0.92;
+    --ease-depth: -20px;
+    --ease-duration: 0.45s;
+    --ease-easing: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+    --ease-hover-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+}
+
+/* Parent */
+
+.ease-hover-perspective-container {
+    display: inline-block;
+    perspective: var(--ease-perspective);
+    perspective-origin: center center;
+}
+
+/* Animated Element */
+
+.ease-hover-perspective-shrink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 180px;
+    min-height: 180px;
+    padding: 1.5rem;
+
+    background: #4f46e5;
+    color: #fff;
+
+    border-radius: 18px;
+
+    box-shadow: var(--ease-shadow);
+
+    transform-style: preserve-3d;
+    transform-origin: center center;
+
+    transition:
+        transform var(--ease-duration) var(--ease-easing),
+        box-shadow var(--ease-duration) ease,
+        filter var(--ease-duration) ease;
+
+    cursor: pointer;
+
+    will-change: transform;
+}
+
+/* Hover Effect */
+
+.ease-hover-perspective-shrink:hover {
+
+    transform:
+        scale(var(--ease-scale))
+        translateZ(var(--ease-depth));
+
+    box-shadow: var(--ease-hover-shadow);
+
+    filter: brightness(.96);
+
+}
+
+/* Active */
+
+.ease-hover-perspective-shrink:active {
+
+    transform:
+        scale(0.89)
+        translateZ(calc(var(--ease-depth) * 1.5));
+
+}
+
+/* Keyboard Accessibility */
+
+.ease-hover-perspective-shrink:focus-visible {
+
+    outline: 3px solid #ffffff;
+    outline-offset: 5px;
+
+}
+
+/* Reduced Motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ease-hover-perspective-shrink {
+
+        transition: none;
+
+    }
+
+    .ease-hover-perspective-shrink:hover,
+    .ease-hover-perspective-shrink:active {
+
+        transform: none;
+
+        box-shadow: var(--ease-shadow);
+
+        filter: none;
+
+    }
+
+}
