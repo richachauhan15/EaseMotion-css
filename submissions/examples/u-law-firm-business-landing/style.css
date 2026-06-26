@@ -1,0 +1,104 @@
+/* ===========================
+   Global Styles
+=========================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.5em;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===========================
+   Navigation
+=========================== */
+nav {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 1em 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2em;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ===========================
+   Hero Section
+=========================== */
+.hero {
+  background: url('law-firm-hero.jpg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 6em 2em;
+}
+
+.hero h1 {
+  font-size: 3em;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-top: 1em;
+}
+
+/* ===========================
+   Practice Areas
+=========================== */
+.practice-areas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2em;
+  margin: 4em 0;
+}
+
+.practice-card {
+  background: #fff;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.practice-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===========================
+   Attorneys
+=========================== */
+.attorneys {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin: 4em 0;
+}
+
+.attorney-profile {
+  flex: 1 1 250px;
+  background: #fff;
+  padding: 2em;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba
+}
+
