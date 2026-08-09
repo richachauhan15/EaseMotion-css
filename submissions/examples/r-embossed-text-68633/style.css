@@ -1,0 +1,520 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #d9dde3;
+  --text: #aeb5be;
+  --dark-shadow: #8e959e;
+  --light-shadow: #f7f9fc;
+  --accent: #68717d;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: var(--accent);
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(255, 255, 255, 0.55),
+      transparent 35%
+    ),
+    linear-gradient(145deg, #eef1f5, var(--background));
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+.emboss-showcase {
+  width: min(100%, 800px);
+  padding: clamp(2rem, 6vw, 5rem);
+  text-align: center;
+  border-radius: 32px;
+  background: linear-gradient(
+    145deg,
+    #e5e8ec,
+    #cdd2d9
+  );
+  box-shadow:
+    18px 18px 35px rgba(110, 118, 128, 0.28),
+    -18px -18px 35px rgba(255, 255, 255, 0.75);
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  color: #777f89;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.embossed-text {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(3rem, 13vw, 8rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: 0.06em;
+  text-shadow:
+    -2px -2px 3px var(--light-shadow),
+    2px 2px 3px var(--dark-shadow),
+    -1px -1px 1px rgba(255, 255, 255, 0.65),
+    1px 1px 1px rgba(120, 128, 138, 0.35);
+}
+
+.emboss-showcase p {
+  max-width: 520px;
+  margin: 1.75rem auto 0;
+  color: #737b85;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.7;
+}
+
+.subtle-text {
+  display: block;
+  margin-top: 1.5rem;
+  color: #8a929c;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+/* Raised variation on hover */
+.embossed-text:hover {
+  color: #b7bdc5;
+  text-shadow:
+    3px 3px 5px rgba(126, 134, 144, 0.5),
+    -3px -3px 5px rgba(255, 255, 255, 0.9);
+}
+
+/* Keyboard focus */
+.embossed-text:focus-visible {
+  outline: 3px solid rgba(80, 100, 120, 0.45);
+  outline-offset: 8px;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 1rem;
+  }
+
+  .emboss-showcase {
+    padding: 2rem 1.25rem;
+    border-radius: 24px;
+  }
+
+  .embossed-text {
+    letter-spacing: 0.03em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .embossed-text {
+    transition: none;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #d9dde3;
+  --text: #aeb5be;
+  --dark-shadow: #8e959e;
+  --light-shadow: #f7f9fc;
+  --accent: #68717d;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: var(--accent);
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(255, 255, 255, 0.55),
+      transparent 35%
+    ),
+    linear-gradient(145deg, #eef1f5, var(--background));
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+.emboss-showcase {
+  width: min(100%, 800px);
+  padding: clamp(2rem, 6vw, 5rem);
+  text-align: center;
+  border-radius: 32px;
+  background: linear-gradient(
+    145deg,
+    #e5e8ec,
+    #cdd2d9
+  );
+  box-shadow:
+    18px 18px 35px rgba(110, 118, 128, 0.28),
+    -18px -18px 35px rgba(255, 255, 255, 0.75);
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  color: #777f89;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.embossed-text {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(3rem, 13vw, 8rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: 0.06em;
+  text-shadow:
+    -2px -2px 3px var(--light-shadow),
+    2px 2px 3px var(--dark-shadow),
+    -1px -1px 1px rgba(255, 255, 255, 0.65),
+    1px 1px 1px rgba(120, 128, 138, 0.35);
+}
+
+.emboss-showcase p {
+  max-width: 520px;
+  margin: 1.75rem auto 0;
+  color: #737b85;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.7;
+}
+
+.subtle-text {
+  display: block;
+  margin-top: 1.5rem;
+  color: #8a929c;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+/* Raised variation on hover */
+.embossed-text:hover {
+  color: #b7bdc5;
+  text-shadow:
+    3px 3px 5px rgba(126, 134, 144, 0.5),
+    -3px -3px 5px rgba(255, 255, 255, 0.9);
+}
+
+/* Keyboard focus */
+.embossed-text:focus-visible {
+  outline: 3px solid rgba(80, 100, 120, 0.45);
+  outline-offset: 8px;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 1rem;
+  }
+
+  .emboss-showcase {
+    padding: 2rem 1.25rem;
+    border-radius: 24px;
+  }
+
+  .embossed-text {
+    letter-spacing: 0.03em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .embossed-text {
+    transition: none;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #d9dde3;
+  --text: #aeb5be;
+  --dark-shadow: #8e959e;
+  --light-shadow: #f7f9fc;
+  --accent: #68717d;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: var(--accent);
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(255, 255, 255, 0.55),
+      transparent 35%
+    ),
+    linear-gradient(145deg, #eef1f5, var(--background));
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+.emboss-showcase {
+  width: min(100%, 800px);
+  padding: clamp(2rem, 6vw, 5rem);
+  text-align: center;
+  border-radius: 32px;
+  background: linear-gradient(
+    145deg,
+    #e5e8ec,
+    #cdd2d9
+  );
+  box-shadow:
+    18px 18px 35px rgba(110, 118, 128, 0.28),
+    -18px -18px 35px rgba(255, 255, 255, 0.75);
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  color: #777f89;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.embossed-text {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(3rem, 13vw, 8rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: 0.06em;
+  text-shadow:
+    -2px -2px 3px var(--light-shadow),
+    2px 2px 3px var(--dark-shadow),
+    -1px -1px 1px rgba(255, 255, 255, 0.65),
+    1px 1px 1px rgba(120, 128, 138, 0.35);
+}
+
+.emboss-showcase p {
+  max-width: 520px;
+  margin: 1.75rem auto 0;
+  color: #737b85;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.7;
+}
+
+.subtle-text {
+  display: block;
+  margin-top: 1.5rem;
+  color: #8a929c;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+/* Raised variation on hover */
+.embossed-text:hover {
+  color: #b7bdc5;
+  text-shadow:
+    3px 3px 5px rgba(126, 134, 144, 0.5),
+    -3px -3px 5px rgba(255, 255, 255, 0.9);
+}
+
+/* Keyboard focus */
+.embossed-text:focus-visible {
+  outline: 3px solid rgba(80, 100, 120, 0.45);
+  outline-offset: 8px;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 1rem;
+  }
+
+  .emboss-showcase {
+    padding: 2rem 1.25rem;
+    border-radius: 24px;
+  }
+
+  .embossed-text {
+    letter-spacing: 0.03em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .embossed-text {
+    transition: none;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #d9dde3;
+  --text: #aeb5be;
+  --dark-shadow: #8e959e;
+  --light-shadow: #f7f9fc;
+  --accent: #68717d;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color: var(--accent);
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(255, 255, 255, 0.55),
+      transparent 35%
+    ),
+    linear-gradient(145deg, #eef1f5, var(--background));
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+.emboss-showcase {
+  width: min(100%, 800px);
+  padding: clamp(2rem, 6vw, 5rem);
+  text-align: center;
+  border-radius: 32px;
+  background: linear-gradient(
+    145deg,
+    #e5e8ec,
+    #cdd2d9
+  );
+  box-shadow:
+    18px 18px 35px rgba(110, 118, 128, 0.28),
+    -18px -18px 35px rgba(255, 255, 255, 0.75);
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  color: #777f89;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.embossed-text {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(3rem, 13vw, 8rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: 0.06em;
+  text-shadow:
+    -2px -2px 3px var(--light-shadow),
+    2px 2px 3px var(--dark-shadow),
+    -1px -1px 1px rgba(255, 255, 255, 0.65),
+    1px 1px 1px rgba(120, 128, 138, 0.35);
+}
+
+.emboss-showcase p {
+  max-width: 520px;
+  margin: 1.75rem auto 0;
+  color: #737b85;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.7;
+}
+
+.subtle-text {
+  display: block;
+  margin-top: 1.5rem;
+  color: #8a929c;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+/* Raised variation on hover */
+.embossed-text:hover {
+  color: #b7bdc5;
+  text-shadow:
+    3px 3px 5px rgba(126, 134, 144, 0.5),
+    -3px -3px 5px rgba(255, 255, 255, 0.9);
+}
+
+/* Keyboard focus */
+.embossed-text:focus-visible {
+  outline: 3px solid rgba(80, 100, 120, 0.45);
+  outline-offset: 8px;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 1rem;
+  }
+
+  .emboss-showcase {
+    padding: 2rem 1.25rem;
+    border-radius: 24px;
+  }
+
+  .embossed-text {
+    letter-spacing: 0.03em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .embossed-text {
+    transition: none;
+  }
+}
