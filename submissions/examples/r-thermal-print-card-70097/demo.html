@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CSS thermal printer receipt card">
+  <title>Thermal Print Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="page">
+    <article class="receipt" aria-label="Thermal printer receipt card">
+
+      <div class="receipt__top">
+        <span class="receipt__dot"></span>
+        <span class="receipt__dot"></span>
+        <span class="receipt__dot"></span>
+      </div>
+
+      <header class="receipt__header">
+        <div class="receipt__logo" aria-hidden="true">RP</div>
+
+        <div>
+          <p class="receipt__eyebrow">THERMAL PRINT</p>
+          <h1>Receipt #2048</h1>
+        </div>
+      </header>
+
+      <div class="receipt__divider"></div>
+
+      <section class="receipt__meta" aria-label="Receipt information">
+        <div>
+          <span>DATE</span>
+          <strong>11 AUG 2026</strong>
+        </div>
+
+        <div>
+          <span>TIME</span>
+          <strong>10:42 AM</strong>
+        </div>
+
+        <div>
+          <span>ORDER</span>
+          <strong>#2048</strong>
+        </div>
+      </section>
+
+      <div class="receipt__divider receipt__divider--dashed"></div>
+
+      <section class="items" aria-label="Purchased items">
+        <div class="item item--heading">
+          <span>ITEM</span>
+          <span>QTY</span>
+          <span>PRICE</span>
+        </div>
+
+        <div class="item">
+          <span>Classic T-Shirt</span>
+          <span>1</span>
+          <span>₹799</span>
+        </div>
+
+        <div class="item">
+          <span>Canvas Sneakers</span>
+          <span>1</span>
+          <span>₹1,499</span>
+        </div>
+
+        <div class="item">
+          <span>Cotton Cap</span>
+          <span>2</span>
+          <span>₹598</span>
+        </div>
+      </section>
+
+      <div class="receipt__divider"></div>
+
+      <section class="totals" aria-label="Receipt totals">
+        <div>
+          <span>SUBTOTAL</span>
+          <strong>₹2,896</strong>
+        </div>
+
+        <div>
+          <span>TAX</span>
+          <strong>₹145</strong>
+        </div>
+
+        <div class="totals__grand">
+          <span>TOTAL</span>
+          <strong>₹3,041</strong>
+        </div>
+      </section>
+
+      <div class="barcode" aria-label="Decorative barcode">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <p class="barcode-number">8 2048 1108 2601</p>
+
+      <p class="receipt__message">THANK YOU FOR YOUR PURCHASE</p>
+
+      <div class="receipt__bottom" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </article>
+  </main>
+
+</body>
+</html>
